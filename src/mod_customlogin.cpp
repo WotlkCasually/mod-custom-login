@@ -385,8 +385,7 @@ public:
                         player->learnSpell(266);	// Guns
                         player->learnSpell(196);	// Axes
                         player->learnSpell(198);	// Maces
-                        player->learnSpell(201);	// Swords
-                        player->learnSpell(750);	// Plate Mail
+                        player->learnSpell(201);	// Swords                        
                         player->learnSpell(200);	// PoleArms
                         player->learnSpell(9116);	// Shields
                         player->learnSpell(197);	// 2H Axe
@@ -394,139 +393,267 @@ public:
                         player->learnSpell(202);	// 2H Sword
                         player->learnSpell(227);	// Staves
                         player->learnSpell(2567);	// Thrown
+						player->learnSpell(1180);	// Daggers
+						player->learnSpell(5009);	// Wands
+						player->learnSpell(750);	// Plate Mail
+						player->learnSpell(8737);	// Mail
                     */
 
-                case CLASS_PALADIN:
-                    player->learnSpell(196);	// Axes
-                    player->learnSpell(750);	// Plate Mail
-                    player->learnSpell(200);	// PoleArms
-                    player->learnSpell(197);	// 2H Axe
+				case CLASS_WARRIOR:
+					player->learnSpell(750);	// Plate Mail	
+					player->learnSpell(202);	// 2H Sword
+					player->learnSpell(197);	// 2H Axe
                     player->learnSpell(199);	// 2H Mace
-                    break;
-
-                case CLASS_SHAMAN:
-                    player->learnSpell(15590);	// Fists
-                    player->learnSpell(8737);	// Mail
-                    player->learnSpell(196);	// Axes
-                    player->learnSpell(197);	// 2H Axe
-                    player->learnSpell(199);	// 2H Mace
-                    break;
-
-                case CLASS_WARRIOR:
-                    player->learnSpell(264);	// Bows
+					player->learnSpell(266);	// Guns
+					player->learnSpell(1180);	// Daggers
+					player->learnSpell(227);	// Staves
+					player->learnSpell(201);	// Swords
+					player->learnSpell(196);	// Axes
+					player->learnSpell(198);	// Maces
+					player->learnSpell(15590);	// Fists										
+					player->learnSpell(264);	// Bows
                     player->learnSpell(5011);	// Crossbow
-                    player->learnSpell(674);	// Dual Wield
-                    player->learnSpell(15590);	// Fists
-                    player->learnSpell(266);	// Guns
-                    player->learnSpell(750);	// Plate Mail
-                    player->learnSpell(200);	// PoleArms
-                    player->learnSpell(199);	// 2H Mace
-                    player->learnSpell(227);	// Staves
+					player->learnSpell(200);	// PoleArms   								
                     break;
 
-                case CLASS_HUNTER:
-                    player->learnSpell(674);	// Dual Wield
-                    player->learnSpell(15590);	// Fists
-                    player->learnSpell(264);	// Bows
-                    player->learnSpell(266);	// Guns
-                    player->learnSpell(8737);	// Mail
-                    player->learnSpell(200);	// PoleArms
-                    player->learnSpell(227);	// Staves
+                case CLASS_PALADIN:					
+					player->learnSpell(750);	// Plate Mail
                     player->learnSpell(202);	// 2H Sword
-                    break;
-
-                case CLASS_ROGUE:
-                    player->learnSpell(264);	// Bows
-                    player->learnSpell(5011);	// Crossbow
-                    player->learnSpell(15590);	// Fists
-                    player->learnSpell(266);	// Guns
-                    player->learnSpell(196);	// Axes
-                    player->learnSpell(198);	// Maces
-                    player->learnSpell(201);	// Swords
-                    break;
-
-                case CLASS_DRUID:
-                    player->learnSpell(1180);	// Daggers
-                    player->learnSpell(15590);	// Fists
-                    player->learnSpell(198);	// Maces
-                    player->learnSpell(200);	// PoleArms
-                    player->learnSpell(227);	// Staves
+					player->learnSpell(197);	// 2H Axe
                     player->learnSpell(199);	// 2H Mace
-                    break;
+					player->learnSpell(201);	// Swords
+					player->learnSpell(196);	// Axes
+					player->learnSpell(198);	// Maces
+					player->learnSpell(200);	// PoleArms		
 
-                case CLASS_MAGE:
-                    player->learnSpell(201);	// Swords
-                    break;
+					switch (player->GetTeamId())
+					{
 
-                case CLASS_WARLOCK:
-                    player->learnSpell(201);	// Swords
-                    break;
+					case TEAM_ALLIANCE:						
+						player->learnSpell(23214);	// Alliance Pally Mount	 						
+						break;
+					case TEAM_HORDE:						
+						player->learnSpell(34767);	// Horde Pally Mount						
+						break;
 
-                case CLASS_PRIEST:
-                    player->learnSpell(1180);	// Daggers
+					default:
+						break;
+					}					
+					break;
+
+				case CLASS_HUNTER:
+					player->learnSpell(8737);	// Mail
+                    player->learnSpell(202);	// 2H Sword
+					player->learnSpell(197);	// 2H Axe
+					player->learnSpell(266);	// Guns
+					player->learnSpell(1180);	// Daggers
+					player->learnSpell(227);	// Staves
+					player->learnSpell(201);	// Swords
+					player->learnSpell(196);	// Axes
+					player->learnSpell(15590);	// Fists	
+					player->learnSpell(264);	// Bows					
+                    player->learnSpell(5011);	// Crossbow
+					player->learnSpell(200);	// PoleArms                                     
+					player->learnSpell(883);	// Call Pet         
+					player->learnSpell(2641);	// Dismiss Pet         
+					player->learnSpell(6991);	// Feed Pet         
+                    break;
+					
+				case CLASS_ROGUE:
+                    player->learnSpell(266);	// Guns
+					player->learnSpell(1180);	// Daggers					
+					player->learnSpell(201);	// Swords
+                    player->learnSpell(196);	// Axes
+					player->learnSpell(198);	// Maces				
+                    player->learnSpell(15590);	// Fists
+                    player->learnSpell(264);	// Bows
+                    player->learnSpell(5011);	// Crossbow                                        
+                    break;
+					            
+                case CLASS_PRIEST:                    
+					player->learnSpell(1180);	// Daggers
+					player->learnSpell(227);	// Staves
+					player->learnSpell(198);	// Maces
+					player->learnSpell(5009);	// Wands
                     break;
 
                 case CLASS_DEATH_KNIGHT:
-                    player->learnSpell(198);	// Maces
+					player->removeSpell(45470,255,0); // Bugged Death Strike Fix 
+				
+					player->learnSpell(750);	// Plate Mail
+                    player->learnSpell(202);	// 2H Sword
+					player->learnSpell(197);	// 2H Axe
                     player->learnSpell(199);	// 2H Mace
+					player->learnSpell(201);	// Swords
+					player->learnSpell(196);	// Axes
+					player->learnSpell(198);	// Maces
+					player->learnSpell(200);	// PoleArms  				
+					
                     break;
 
-                default:
+				case CLASS_SHAMAN:     
+					player->learnSpell(8737);	// Mail				
+                    player->learnSpell(197);	// 2H Axe
+                    player->learnSpell(199);	// 2H Mace
+					player->learnSpell(1180);	// Daggers
+					player->learnSpell(227);	// Staves
+					player->learnSpell(196);	// Axes
+					player->learnSpell(198);	// Maces
+					player->learnSpell(15590);	// Fists
+                    break;		
+
+				case CLASS_MAGE:     
+					 // Add a few teleportation runes
+					player->AddItem(17031, 5);	// Rune of Teleportation
+
+					// Learn Teleports
+					switch (player->GetTeamId())
+					{
+
+					case TEAM_ALLIANCE:
+
+						// Alliance Teleports
+						player->learnSpell(3565);	// Darnassus
+						player->learnSpell(32271);	// Exodar
+						player->learnSpell(3562);	// Ironforge
+						player->learnSpell(33690);	// Shattrath
+						player->learnSpell(3561);	// Stormwind
+						break;
+
+					case TEAM_HORDE:
+
+						// Horde Teleports
+						player->learnSpell(3567);	// Orgrimmar
+						player->learnSpell(35715);	// Shattrath
+						player->learnSpell(32272);	// Silvermoon
+						player->learnSpell(3566);	// Thunder Bluff
+						player->learnSpell(3563);	// Undercity
+						break;
+
+					default:
+						break;
+					}
+				
+					player->learnSpell(1180);	// Daggers
+					player->learnSpell(227);	// Staves
+					player->learnSpell(201);	// Swords
+					player->learnSpell(5009);	// Wands
+                    break;
+
+                case CLASS_WARLOCK:
+                    player->learnSpell(1180);	// Daggers
+					player->learnSpell(227);	// Staves
+					player->learnSpell(201);	// Swords
+					player->learnSpell(5009);	// Wands
+					
+					player->learnSpell(23161);	// Warlock Mount
+                    break;
+					
+                case CLASS_DRUID:
+                    player->learnSpell(199);	// 2H Mace
+					player->learnSpell(1180);	// Daggers
+                    player->learnSpell(227);	// Staves
+					player->learnSpell(198);	// Maces
+					player->learnSpell(15590);	// Fists
+                    player->learnSpell(200);	// PoleArms                                        
+                    break;
+                                           
+                default:									                                   
                     break;
                 }
 
-                // Inform the player they have new skills
-                std::ostringstream ss;
+				// GENERIC
+				player->learnSpell(33388);	// App Riding                                        
+				player->learnSpell(33391);	// Journey Riding                                        
+				player->learnSpell(34090);	// Expert Riding                                        
+				player->learnSpell(34091);	// Artisan Riding                                        
+				player->learnSpell(54197);	// Northrend Riding   
+
+				
+				player->UpdateSkillsToMaxSkillsForLevel();
+                
+				// Learn Flying Mounts
+					switch (player->GetTeamId())
+					{
+
+					case TEAM_ALLIANCE:						
+						player->learnSpell(32242);	// Alliance Mount	 						
+						break;
+					case TEAM_HORDE:						
+						player->learnSpell(32246);	// Horde Mount						
+						break;
+
+					default:
+						break;
+					}
+				
+				// Learn Ground Mounts
+					switch (player->getRace())
+					{
+					case RACE_HUMAN:						
+						player->learnSpell(23227);	// Human Mount  						
+						break;
+					case RACE_ORC:						
+						player->learnSpell(23250);	// Orc Mount						
+						break;
+					case RACE_DWARF:						
+						player->learnSpell(23239);	// Dwarf Mount					
+						break;
+					case RACE_NIGHTELF:						
+						player->learnSpell(23219);	// Night Elf Mount 						
+						break;
+					case RACE_UNDEAD_PLAYER:						
+						player->learnSpell(17465);	// Undead Mount 						
+						break;
+					case RACE_TAUREN:						
+						player->learnSpell(23249);	// Tauren Mount						
+						break;
+					case RACE_GNOME:						
+						player->learnSpell(23225);	// Gnome Mount 						
+						break;
+					case RACE_TROLL:						
+						player->learnSpell(23242);	// Troll Mount 						
+						break;
+					case RACE_BLOODELF:						
+						player->learnSpell(35027);	// Blood Elf Mount						
+						break;
+					case RACE_DRAENEI:						
+						player->learnSpell(35714);	// Dranei Mount 						
+						break;	
+					default:
+						break;
+					}
+				
+					
+				
+				// Inform the player they have new skills
+                /*
+				std::ostringstream ss;
                 ss << "|cffFF8000[|cFFBDB76BCL|cffFF8000] You have been granted |cFFBDB76Badditional weapon skills|cffFF8000.";
                 ChatHandler(player->GetSession()).SendSysMessage(ss.str().c_str());
+				*/
             }
 
             // If enabled.. learn special skills abilities
             if (LoginSpecialAbility)
             {
                 // Learn Specialized Skills
+				/*
                 player->learnSpell(1784);	// Stealth
                 player->learnSpell(921);	// Pick Pocket
                 player->learnSpell(1804);	// Lockpicking
                 player->learnSpell(11305);	// Sprint (3)
                 player->learnSpell(5384);	// Feign Death
                 player->learnSpell(475);	// Remove Curse
-
-                // Add a few teleportation runes
-                player->AddItem(17031, 5);	// Rune of Teleportation
-
-                // Learn Teleports
-                switch (player->GetTeamId())
-                {
-
-                case TEAM_ALLIANCE:
-
-                    // Alliance Teleports
-                    player->learnSpell(3565);	// Darnassus
-                    player->learnSpell(32271);	// Exodar
-                    player->learnSpell(3562);	// Ironforge
-                    player->learnSpell(33690);	// Shattrath
-                    player->learnSpell(3561);	// Stormwind
-                    break;
-
-                case TEAM_HORDE:
-
-                    // Horde Teleports
-                    player->learnSpell(3567);	// Orgrimmar
-                    player->learnSpell(35715);	// Shattrath
-                    player->learnSpell(32272);	// Silvermoon
-                    player->learnSpell(3566);	// Thunder Bluff
-                    player->learnSpell(3563);	// Undercity
-                    break;
-
-                default:
-                    break;
-                }
+			*/
+               
 
                 // Inform the player they have new skills
-                std::ostringstream ss;
+                /*
+				std::ostringstream ss;
                 ss << "|cffFF8000[|cFFBDB76BCL|cffFF8000] Your spellbook has been scribed with |cFFBDB76Bspecial abilities|cffFF8000.";
                 ChatHandler(player->GetSession()).SendSysMessage(ss.str().c_str());
+				*/
             }
 
             // If enabled.. set exalted factions (AzerothCore config for rep not working as of 2017-08-25)
@@ -558,9 +685,11 @@ public:
                 }
 
                 // Inform the player they have exalted reputations
-                std::ostringstream ss;
+                /*
+				std::ostringstream ss;
                 ss << "|cffFF8000[|cFFBDB76BCL|cffFF8000] Your are now |cFFBDB76BExalted|cffFF8000 with your faction's capital cities.";
                 ChatHandler(player->GetSession()).SendSysMessage(ss.str().c_str());
+				*/
             }
         }
     }
